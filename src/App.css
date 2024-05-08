@@ -11,6 +11,7 @@
 
 body {
   background-color: #1b1b1b;
+  padding: 21px;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
