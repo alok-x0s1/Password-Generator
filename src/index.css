@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.checkbox-wrapper-51 input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-51 .toggle {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-51 .toggle:before {
+  content: "";
+  position: relative;
+  top: 1px;
+  left: 1px;
+  width: 40px;
+  height: 22px;
+  display: block;
+  background: #c8ccd4;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+.checkbox-wrapper-51 .toggle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(154, 153, 153, 0.75);
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-51 .toggle span svg {
+  margin: 7px;
+  fill: none;
+}
+.checkbox-wrapper-51 .toggle span svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 0;
+  transition: all 0.5s linear;
+}
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle:before {
+  background: #52d66b;
+}
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span {
+  transform: translateX(18px);
+}
+.checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span path {
+  stroke: #52d66b;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+}
+
+
+.copyBtn {
+    align-items: center;
+    background-color: #FF5252;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .copyBtn:after {
+    background-color: #111;
+    border-radius: 8px;
+    border: 1px solid gray;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform 0.2s ease-out;
+    z-index: -1;
+  }
+  
+  .copyBtn:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .copyBtn:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .copyBtn:hover {
+    outline: 0;
+    background-color: #FF1744;
+  }
+  
+  @media (min-width: 768px) {
+    .copyBtn {
+      padding: 0 40px;
+    }
+  }
+  
